@@ -2,10 +2,7 @@
 set -euo pipefail
 set -x
 
-APISIX_PREFIX=${OR_PREFIX:="/usr/local/apisix"}
-OUTPUT=${OUTPUT:"tmp"}
-
-cd $OUTPUT
+APISIX_PREFIX=${APISIX_PREFIX:="/usr/local/apisix"}
 
 # install LuaRocks
 curl https://raw.githubusercontent.com/apache/apisix/master/utils/linux-install-luarocks.sh -sL | bash -
